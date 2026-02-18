@@ -41,16 +41,16 @@ export default function HelpCentre() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b1220] flex items-center justify-center p-8">
+    <div className="min-h-screen bg-slate-900 flex items-center justify-center p-8">
 
-      <div className="w-full max-w-3xl bg-[#111827] rounded-2xl border border-[#1f2937] flex flex-col h-[85vh]">
+      <div className="w-full max-w-3xl bg-slate-800 rounded-2xl border border-slate-700 flex flex-col h-[85vh]">
 
         {/* Header */}
-        <div className="px-6 py-4 border-b border-[#1f2937] text-gray-300 text-base font-medium tracking-wide">
+        <div className="px-6 py-4 border-b border-slate-700 text-slate-300 text-base font-medium tracking-wide">
           Help Centre Assistant
         </div>
 
-        {/* Messages */}
+
         <div className="flex-1 overflow-y-auto px-8 py-6 space-y-6">
 
           {messages.map((msg, index) => (
@@ -63,8 +63,8 @@ export default function HelpCentre() {
               <div
                 className={`px-5 py-3 rounded-2xl max-w-lg text-sm leading-relaxed ${
                   msg.role === "user"
-                    ? "bg-[#1f2937] text-gray-200"
-                    : "bg-[#182033] text-gray-300"
+                    ? "bg-slate-700 text-slate-200"
+                    : "bg-slate-600 text-slate-100"
                 }`}
               >
                 {msg.content}
@@ -74,7 +74,7 @@ export default function HelpCentre() {
 
           {loading && (
             <div className="flex justify-start">
-              <div className="bg-[#182033] text-gray-400 px-5 py-3 rounded-2xl text-sm">
+              <div className="bg-slate-600 text-slate-300 px-5 py-3 rounded-2xl text-sm">
                 Typing...
               </div>
             </div>
@@ -82,13 +82,13 @@ export default function HelpCentre() {
 
         </div>
 
-        {/* Input */}
-        <div className="px-6 py-4 border-t border-[#1f2937]">
-          <div className="flex items-center gap-3 bg-[#0f172a] rounded-xl px-4 py-3 border border-[#1f2937]">
+
+        <div className="px-6 py-4 border-t border-slate-700">
+          <div className="flex items-center gap-3 bg-slate-900 rounded-xl px-4 py-3 border border-slate-700">
 
             <input
               type="text"
-              className="flex-1 bg-transparent text-gray-200 placeholder-gray-500 focus:outline-none text-sm"
+              className="flex-1 bg-transparent text-slate-200 placeholder-slate-500 focus:outline-none text-sm"
               placeholder="Ask something..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -97,7 +97,7 @@ export default function HelpCentre() {
 
             <button
               onClick={sendMessage}
-              className="text-gray-300 hover:text-white transition text-sm"
+              className="text-slate-300 hover:text-white transition text-sm"
             >
               Send
             </button>

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 
 export default function App() {
   return (
+    <div className="h-screen overflow-hidden flex flex-col">
     <Router>
       <Header />
 
@@ -13,5 +14,6 @@ export default function App() {
         <Route path="/help-centre" element={<HelpCentre />} />
       </Routes>
     </Router>
+    </div>
   );
 }

@@ -28,12 +28,28 @@ llm = Ollama(model="phi3")
 
 
 prompt = ChatPromptTemplate.from_template(
-    """Answer the question based only on the context below:
-    {context}
-
-    Question: {question}
     """
+You are a professional corporate helpdesk assistant.
+
+Use ONLY the provided context to answer the question.
+
+Rules:
+- Answer in 1-2 short sentences.
+- Be clear and direct.
+- Do NOT mention document IDs, page numbers, or internal references.
+- Do NOT say "according to the document" or similar phrases.
+- If the answer is not in the context, say: "I couldn't find that information."
+
+Context:
+{context}
+
+Question:
+{question}
+
+Answer:
+"""
 )
+
 
 
 chain = (

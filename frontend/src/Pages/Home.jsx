@@ -6,7 +6,7 @@ import FloatingButtons from "../components/FloatingButtons";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
+    <div className="h-screen overflow-hidden flex flex-col">
 
 
 
