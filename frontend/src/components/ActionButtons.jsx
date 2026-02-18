@@ -20,7 +20,7 @@ export default function ActionButtons() {
             {action}
           </span>
 
-          {/* Icon */}
+          
           <MoveUpRight
             size={14}
             className="text-current transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"

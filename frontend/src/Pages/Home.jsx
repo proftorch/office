@@ -10,13 +10,13 @@ export default function Home() {
 
       <Header />
 
-      {/* Background Layer */}
+
       <div className="absolute inset-0 -z-10">
         <div className="h-[50vh] bg-gradient-to-r from-blue-500 to-amber-300"></div>
         <div className="h-[50vh] bg-white"></div>
       </div>
 
-      {/* Foreground Content */}
+
       <div className="relative max-w-5xl mx-auto py-6">
         <SearchSection />
         <ActionButtons />

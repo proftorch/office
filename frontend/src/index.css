@@ -9,9 +9,9 @@
 }
 
 .swiper {
-  padding-bottom: 40px; /* creates space */
+  padding-bottom: 40px;
 }
 
 .swiper-pagination {
-  bottom: -5px !important; /* moves dots lower */
+  bottom: -5px !important;
 }

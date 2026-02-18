@@ -28,7 +28,7 @@ export default function NewsCard({ item }) {
         </span>
       </div>
 
-      {/* Hover */}
+    
       <div
         className="
           absolute inset-0

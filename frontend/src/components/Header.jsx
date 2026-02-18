@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className="w-full bg-[#000048] text-white px-16 py-4 flex items-center justify-between">
 
-      {/* 👇 Click this to go Home */}
+      
       <Link
         to="/"
         className="text-lg font-bold tracking-wide hover:opacity-80"
