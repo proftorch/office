@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.swiper {
+  padding-bottom: 40px; /* creates space */
+}
+
+.swiper-pagination {
+  bottom: -5px !important; /* moves dots lower */
+}
