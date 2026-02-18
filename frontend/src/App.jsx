@@ -6,7 +6,7 @@ import Header from "./components/Header";
 export default function App() {
   return (
     <Router>
-      <Header />  
+      <Header />
 
       <Routes>
         <Route path="/" element={<Home />} />

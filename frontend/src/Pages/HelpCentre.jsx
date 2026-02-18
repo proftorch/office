@@ -41,47 +41,68 @@ export default function HelpCentre() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
-      <div className="w-full max-w-2xl bg-white shadow-xl rounded-xl flex flex-col h-[80vh]">
+    <div className="min-h-screen bg-[#0b1220] flex items-center justify-center p-8">
 
-    
-        <div className="flex-1 overflow-y-auto p-4 space-y-3">
+      <div className="w-full max-w-3xl bg-[#111827] rounded-2xl border border-[#1f2937] flex flex-col h-[85vh]">
+
+        {/* Header */}
+        <div className="px-6 py-4 border-b border-[#1f2937] text-gray-300 text-base font-medium tracking-wide">
+          Help Centre Assistant
+        </div>
+
+        {/* Messages */}
+        <div className="flex-1 overflow-y-auto px-8 py-6 space-y-6">
+
           {messages.map((msg, index) => (
             <div
               key={index}
-              className={`p-3 rounded-lg max-w-xs ${
-                msg.role === "user"
-                  ? "bg-blue-600 text-white ml-auto"
-                  : "bg-gray-200 text-black"
+              className={`flex ${
+                msg.role === "user" ? "justify-end" : "justify-start"
               }`}
             >
-              {msg.content}
+              <div
+                className={`px-5 py-3 rounded-2xl max-w-lg text-sm leading-relaxed ${
+                  msg.role === "user"
+                    ? "bg-[#1f2937] text-gray-200"
+                    : "bg-[#182033] text-gray-300"
+                }`}
+              >
+                {msg.content}
+              </div>
             </div>
           ))}
 
           {loading && (
-            <div className="bg-gray-200 p-3 rounded-lg w-fit">
-              Typing...
+            <div className="flex justify-start">
+              <div className="bg-[#182033] text-gray-400 px-5 py-3 rounded-2xl text-sm">
+                Typing...
+              </div>
             </div>
           )}
+
         </div>
 
+        {/* Input */}
+        <div className="px-6 py-4 border-t border-[#1f2937]">
+          <div className="flex items-center gap-3 bg-[#0f172a] rounded-xl px-4 py-3 border border-[#1f2937]">
 
-        <div className="p-4 border-t flex gap-2">
-          <input
-            type="text"
-            className="flex-1 border rounded-lg px-3 py-2 focus:outline-none"
-            placeholder="Type your question..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-          />
-          <button
-            onClick={sendMessage}
-            className="bg-blue-600 text-white px-4 rounded-lg"
-          >
-            Send
-          </button>
+            <input
+              type="text"
+              className="flex-1 bg-transparent text-gray-200 placeholder-gray-500 focus:outline-none text-sm"
+              placeholder="Ask something..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+            />
+
+            <button
+              onClick={sendMessage}
+              className="text-gray-300 hover:text-white transition text-sm"
+            >
+              Send
+            </button>
+
+          </div>
         </div>
 
       </div>
