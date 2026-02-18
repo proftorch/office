@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <div className="relative min-h-screen">
 
-      <Header />
 
 
       <div className="absolute inset-0 -z-10">
